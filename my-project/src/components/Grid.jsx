@@ -16,7 +16,7 @@ const Grid = () => {
                  in React.js and other front-end technologies.
               </p>
 
-              <Link to='/about' className='flex xl:absolute justify-center items-center z-10 '> 
+              <Link to='/about' onClick={() => window.scrollTo(0, 0)}   className='flex xl:absolute justify-center items-center z-10 '> 
                   <div className='bg-transparent border mt-12 text-[17px] xl:text-[20px]  z-10 tracking-wider border-[#CCCCCC] dark:border-[#85858A] rounded-full cursor-pointer text-[#A3A3A0] dark:text-[#CECDCE] w-[210px] h-[50px]  sm:w-[260px] sm:h-[60px] xl:w-[290px] xl:h-[65px]  flex justify-center items-center'> 
                     Know more about 
                   </div>
@@ -26,15 +26,15 @@ const Grid = () => {
           </div>
 
           <div className=' grid_2 bg-white dark:bg-blackThemeCard cursor-pointer  shadow-even-md '>
-              <Link to='/about'>
+              <Link to='/about' onClick={() => window.scrollTo(0, 0)}  >
                  <img src={avatar} className='object-cover w-full h-full rounded-[35px] ' alt="avatar" />
               </Link>
           </div>
           
-          <Link  to='mailto:naseebsidan6@gmail.com?subject=Connect%20with%20Me' target='_blank'
+          <a  href='mailto:naseebsidan6@gmail.com?subject=Connect%20with%20Me' target='_blank'
                  className=' grid_3 bg-white dark:bg-lgBackgroundDark  cursor-pointer  shadow-even-md flex items-center justify-center  xl:w-[182px] h-full'  >
                       <img src={gmail} className='w-[50px] h-[50px]' alt="gmail" />
-          </Link>
+          </a>
           
           <div className='grid_4 bg-white dark:bg-blackThemeCard  shadow-even-md grid grid-rows-3 grid-cols-3 gap-[20px]  p-[20px]'>
             <div className="card bg-[#EEECEC] dark:bg-[#414147] dark:text-[#DADADB]"> <img src={js} alt="js" /> Java script</div>
