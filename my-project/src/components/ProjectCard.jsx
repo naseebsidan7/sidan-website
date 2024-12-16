@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
+import { globeGif, globePreview } from "../assets";
  
 const ProjectCard = ({item, projectDetails}) => {
 
@@ -53,7 +54,7 @@ const ProjectCard = ({item, projectDetails}) => {
             <a href={item.liveLink} target="_blank"  onClick={handleAnchorClick}  onMouseEnter={handleMouseEnter}
                onMouseLeave={handleMouseLeave} rel="noopener noreferrer" className="flex items-center justify-center absolute bottom-8 left-8 z-0">
                 <img className="w-[45px] h-[45px]"
-                     src={isHovered ? "../src/assets/gif/globe.gif" : "../src/assets/gif/globepreview.png"}
+                     src={isHovered ? globeGif : globePreview }
                      alt="globe" />
                 <p className="sm-border sm:border-opacity-0 sm:hover:border-b dark:border-[#a3a3a3] text-xl tracking-wider font-forum bg-linearGradient_text3 dark:bg-linearGradient_text2 text-gradient">Live website</p>
             </a>//

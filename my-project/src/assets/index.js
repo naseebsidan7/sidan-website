@@ -96,6 +96,16 @@ import linkedinCX from './contact/linkedin.svg'
 import x from './contact/x.svg'
 
 
+/* ICONS */
+import sun from '../assets/assets/sun.svg';
+import moon from '../assets/assets/moon.svg';
+
+import globePreview from '../assets/gif/globepreview.png'
+import globeGif from '../assets/gif/globe.gif'
+
+import arrowLineRightBlack from '../assets/logo/arrowLineRightBlack.svg'
+import arrowLineRightWhite from '../assets/logo/arrowLineRightWhite.svg'
+
 export {
   
     sidanLogoDark,
@@ -166,5 +176,13 @@ export {
     instaCX,
     linkedinCX,
     x,
+
+    sun,
+    moon,
+    globePreview,
+    globeGif,
+    arrowLineRightBlack,
+    arrowLineRightWhite
+
  
 }

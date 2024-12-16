@@ -1,7 +1,6 @@
 import React from 'react'
 import { cx, githubCX, gmailCX, instaCX, linkedinCX, patternProjectDetails, patternWhiteProjectDetails, x } from '../../assets'
 import './contact.css'
-import { Link } from 'react-router-dom'
 
 const Contact = () => {
   return (

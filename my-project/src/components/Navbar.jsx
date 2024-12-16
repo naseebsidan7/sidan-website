@@ -1,9 +1,9 @@
-import React, {  useState } from 'react'
+import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { toggleMode } from '../redux/state/modeSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { sidanLogoDark, sidanLogoWhite, } from '../assets'
+import { moon, sidanLogoDark, sidanLogoWhite, sun, } from '../assets'
 
 const Navbar = () => {
       const dispatch = useDispatch()
@@ -42,7 +42,7 @@ const Navbar = () => {
                               transform: theme.mode === 'light' ? 'translateX(0)' : 'translateX(76px)',
                         }}
                         >
-                        <img src={theme.mode === 'light' ? "../src/assets/assets/sun.svg" : "../src/assets/assets/moon.svg" } alt="theme-icon" />
+                        <img src={theme.mode === 'light' ? sun : moon } alt="" />
                         </div>
               </button>
 

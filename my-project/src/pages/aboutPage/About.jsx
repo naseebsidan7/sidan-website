@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import ExpertiseSection from '../../components/ExpertiseSection'
-import { patternProjectDetails, patternWhiteProjectDetails } from '../../assets'
+import { arrowLineRightBlack, arrowLineRightWhite, patternProjectDetails, patternWhiteProjectDetails } from '../../assets'
 
 const About = () => {
   return (
@@ -15,8 +15,8 @@ const About = () => {
                  <h1 className='text-nowrap text-[23px] sm:text-[26px] dark:text-white tracking-[2px] '>About me</h1>
                  <Link to='/contact' className='flex flex-row  gap-3  items-center  justify-center '>
                     <h1 className='text-nowrap text-[23px] sm:text-[26px] flex items-center bg-linearGradient_text2 text-gradient'> Connect with me </h1>
-                    <img className='w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] dark:hidden' src="../src/assets/logo/arrowLineRightBlack.svg" alt="" />
-                    <img className='w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] hidden dark:block' src="../src/assets/logo/arrowLineRightWhite.svg" alt="" />
+                    <img className='w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] dark:hidden' src={arrowLineRightBlack} alt="" />
+                    <img className='w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] hidden dark:block' src={arrowLineRightWhite} alt="" />
                  </Link>
             </div>
 
