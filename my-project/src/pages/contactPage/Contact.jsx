@@ -1,7 +1,7 @@
 import React from 'react'
-import { cx, githubCX, gmailCX, instaCX, linkedinCX, patternProjectDetails, patternWhiteProjectDetails, x } from '../../assets'
+import {  githubCX, gmailCX, instaCX, linkedinCX, patternProjectDetails, patternWhiteProjectDetails, x } from '../../assets'
 import './contact.css'
-
+ 
 const Contact = () => {
   return (
     <div className='text-white mt-[9rem] md:mt-[6rem] lg:mt-[8rem] max-w-[58rem] mx-auto z-6 '>

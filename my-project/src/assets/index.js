@@ -88,7 +88,7 @@ import patternProjectDetails from './assets/patterns/patternProjectDetails.svg'
 
  
 /* CONTACTS */
-import cx from './contact/cx.svg'
+ 
 import gmailCX from './contact/gmail.svg'
 import githubCX from './contact/github.svg'
 import instaCX from './contact/insta.svg'
@@ -170,7 +170,7 @@ export {
     patternProjectDetails,
      
 
-    cx,
+
     gmailCX,
     githubCX,
     instaCX,
