@@ -4,6 +4,11 @@ import ProjectCard from "./ProjectCard"
  
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
+import {
+   addProjectStarted,
+   addProjectSuccess,
+   addProjectFailure,
+ } from "../redux/state/projectsSlice.js"; 
 
 
 const SelectedProject = () => {

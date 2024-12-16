@@ -1,4 +1,4 @@
-import {  activekick1, activekick2, restuarant1, restuarant2, restuarant3, restuarant4, movieExplorer1, movieExplorer2,  movieExplorer3, movieExplorer4, bank1, bank2, bank3, gitHubExplorer1, gitHubExplorer2, yt1, yt2,   brainwave1, brainwave2, brainwave3, brainwave4, PropertyNexus1, PropertyNexus2, PropertyNexus3, PropertyNexus4 } from '../assets'
+
 import { apiDark, apiWhite, bootstrapDark, bootstrapWhite, cssDark, cssWhite, expressDark, expressWhite, figmaDark, figmaWhite, gitDark, githubDark, githubWhite, gitWhite, htmlDark, htmlWhite, jsDark, jsWhite, mongodbDark, mongodbWhite, muiDark, muiWhite, nodejsDark, nodejsWhite, npmDark, npmWhite, reactDark, reactWhite, reduxDark, reduxWhite, tailwindcssDark, tailwindcssWhite } from "../assets"
 
 
