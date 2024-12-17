@@ -47,7 +47,7 @@ const ProjectCard = ({item, projectDetails}) => {
               </p>
           </div>
 
-          <p className={`${!projectDetails && 'sm-seeAllProject'} absolute bottom-10 right-20 mr-1  border-b dark:border-[#a3a3a3] opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-500 text-lg tracking-wider font-forum dark:text-[#e3e2e2]`} >{projectDetails ? 'See project details' : 'See all projects'}</p>
+          <p className={`${!projectDetails && 'sm-seeAllProject'} absolute bottom-10 right-20 mr-1  border-b dark:border-[#a3a3a3] opacity-0 md:group-hover:opacity-100 transition-opacity ease-in-out duration-500 text-lg tracking-wider font-forum dark:text-[#e3e2e2]`} >{projectDetails ? 'See project details' : 'See all projects'}</p>
 
          {projectDetails  &&(
          
