@@ -25,12 +25,10 @@ const app = express()
 app.use(express.json())
 app.use(cookieParser())
 
-app.listen(3000, () => console.log('Server is running on port 3000'))
-
+app.listen(2000 , () => console.log('Server is running on port 2000 '))
 
 app.use('/api/auth', authRouter)
 app.use('/api/project', projectRouter)
-
 
 app.use(express.static(path.join(__dirname, '/my-project/dist')))
 app.get('*', (req, res) => {
