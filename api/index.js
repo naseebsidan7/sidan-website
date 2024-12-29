@@ -7,6 +7,12 @@ import projectRouter from './routes/project.route.js'
 import mongoose from 'mongoose'
 import path from 'path'
 
+import cors from 'cors';
+
+app.use(cors({
+  origin: '*',  // You can specify your frontend URL here for stricter CORS rules
+}));
+
 dotenv.config()
 
 
