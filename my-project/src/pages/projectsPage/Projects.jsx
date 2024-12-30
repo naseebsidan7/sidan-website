@@ -27,8 +27,7 @@ const Projects = () => {
    const handleClick = (name) => {
       setSelectedTerm(name)
    }
-   console.log(import.meta.env.VITE_API_BASE_URL+'vite url ');
-
+ 
 
    useEffect(() => {
       if (projects.length === 0) {  // Check if the data is already present in Redux
@@ -36,7 +35,7 @@ const Projects = () => {
    
          const fetchProjects = async () => {
             try {
-               const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/project/getProjects`);
+               const res = await fetch(`/api/project/getProjects`);
                const data = await res.json()
                data.forEach((project) => dispatch(addProjectSuccess(project)))
             } catch (error) {
@@ -87,7 +86,8 @@ const Projects = () => {
 
        <div className="grid grid-cols-1 mt-[7rem] sm:mt-[4rem]  xl:grid-cols-2 gap-10  " style={{ gridAutoFlow: 'row dense' }}>
           {loading && <p className='text-blue-400'>Loading projects...</p>}
-          {error && <p className='text-red-500'>Error: {error}</p>}
+          {projects.length > 0 && error && <p className='text-red-500'>Error: {error}</p>}
+          {projects.length <= 0 && <p className='text-red-500'> No project found</p>}
           
           {filteredProjects.map((item, index) => (
                <ProjectCard item={item} projectDetails={true} key={item.id || `${item.title}-${index}`} />

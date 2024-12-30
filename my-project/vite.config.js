@@ -1,9 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  define: {
-    'process.env': process.env, // Makes environment variables accessible
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://sidan.site',  // Keep this for local development only
+        secure: false
+      }
+    }
   },
+ 
 });
