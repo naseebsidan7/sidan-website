@@ -27,7 +27,7 @@ const Projects = () => {
    const handleClick = (name) => {
       setSelectedTerm(name)
    }
-   console.log(import.meta.env.VITE_API_BASE_URL);
+   console.log(import.meta.env.VITE_API_BASE_URL+'vite url ');
 
 
    useEffect(() => {
