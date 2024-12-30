@@ -34,7 +34,7 @@ const Projects = () => {
    
          const fetchProjects = async () => {
             try {
-               const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/project/getProjects`);
+               const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/project/getProjects`);
                const data = await res.json()
                data.forEach((project) => dispatch(addProjectSuccess(project)))
             } catch (error) {

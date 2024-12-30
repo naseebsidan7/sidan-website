@@ -25,7 +25,7 @@ const ProjectDetails = () => {
         
         const fetchProjectDetails = async () => {
           try {
-            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/project/getProject/${id}`);
+            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/project/getProject/${id}`);
             const data = await res.json();
             dispatch(addProjectDetailsSuccess(data));  // Store data in Redux
           } catch (error) {
