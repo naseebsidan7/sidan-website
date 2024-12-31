@@ -7,10 +7,10 @@ import projectRouter from './routes/project.route.js'
 import mongoose from 'mongoose'
 import path from 'path'
 
-const cors = require('cors');
+import cors from 'cors'
 
 app.use(cors({
-  origin: ['https://sidan.site', 'https://www.sidan.site'],
+  origin: ['https://sidan-website-frontend.vercel.app/', 'https://www.sidan-website-frontend.vercel.app/'],
   credentials: true,
 }));
 
