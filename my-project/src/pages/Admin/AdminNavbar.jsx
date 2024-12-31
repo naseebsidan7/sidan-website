@@ -15,7 +15,7 @@ const AdminSideBar = () => {
   const handleSignOut = async() => {
         try {
             dispatch(signOutUserStart())
-            const res = await fetch(`/api/auth/signout`)
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/signout`)
             const data = res.json()
 
             if(data.success === false) {

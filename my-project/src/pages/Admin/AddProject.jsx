@@ -129,7 +129,7 @@ const AddProject = () => {
             setError(false)
             setLoading(true);
 
-            const response = await fetch(`/api/project/create`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/project/create`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'

@@ -7,6 +7,14 @@ import projectRouter from './routes/project.route.js'
 import mongoose from 'mongoose'
 import path from 'path'
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: ['https://sidan.site', 'https://www.sidan.site'],
+  credentials: true,
+}));
+
+
 dotenv.config()
 
 
