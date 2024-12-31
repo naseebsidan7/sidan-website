@@ -1,16 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
+ 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
-    proxy: {
-      '/api': {
-        target: 'https://sidan.site',  // Keep this for local development only
-        secure: false
-      }
-    }
-  },
- 
+       proxy: {
+          '/api': {
+             target: 'http://localhost:2000',
+             secure: false
+          }
+       }
+  }
 });

@@ -11,6 +11,7 @@ const AddProject = () => {
         imageUrls: [],
         description: [],
         skills: [],
+        category: '',
         liveLink: '',
         githubLink: ''
     })
@@ -154,7 +155,8 @@ const AddProject = () => {
               description: [],
               skills: [],
               liveLink: '',
-              githubLink: ''
+              githubLink: '',
+              category: ''
             });
             setFiles([])
             
@@ -162,6 +164,7 @@ const AddProject = () => {
           } catch (error) {
             console.error('Error submitting the form:', error);
             setError(error.message)
+            setFiles([])
           }
     }
 
@@ -194,6 +197,15 @@ const AddProject = () => {
             placeholder="Skills"
             className="border p-4 rounded-2xl border-gray-300 dark:border-gray-700 bg-lightGray dark:bg-lgBackgroundDark dark:text-white"
             id="skills"
+            required
+            />
+                 <input
+            onChange={handleChange}
+            value={formData.category}
+            type="text"
+            placeholder="category"
+            className="border p-4 rounded-2xl border-gray-300 dark:border-gray-700 bg-lightGray dark:bg-lgBackgroundDark dark:text-white"
+            id="category"
             required
             />
             <textarea
