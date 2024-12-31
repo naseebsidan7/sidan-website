@@ -9,10 +9,6 @@ import path from 'path'
 
 import cors from 'cors'
 
-app.use(cors({
-  origin: ['https://sidan-website-frontend.vercel.app/', 'https://www.sidan-website-frontend.vercel.app/'],
-  credentials: true,
-}));
 
 
 dotenv.config()
@@ -35,6 +31,11 @@ app.use(cookieParser())
 
 app.listen(2000 , () => console.log('Server is running on port 2000 '))
 
+app.use(cors({
+    origin: ['https://sidan-website-frontend.vercel.app/', 'https://www.sidan-website-frontend.vercel.app/'],
+    credentials: true,
+  }));
+  
 app.use('/api/auth', authRouter)
 app.use('/api/project', projectRouter)
 
