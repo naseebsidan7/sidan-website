@@ -3,11 +3,9 @@ import { avatar, bgEllipse, bootstrap, css, figma, git, gmail, html, js, nodejs,
 
 const Grid = () => {
   return (
-    <div className='grid_container max-w-5xl mx-auto  z-6'>
+    <div className='grid_container max-w-5xl mx-auto  z-[3]'>
            
-          <img  src={patternBlack} className='absolute top-0 left-0  z-[-1] dark:hidden object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
-          <img  src={patternWhite} className='absolute top-0 left-0  z-[-1] hidden dark:block object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
-     
+         
           <div className=' grid_1 bg-white dark:bg-blackThemeCard relative p-[30px] sm:p-[50px] xl:p-[60px] shadow-even-md '>
               <h1 className='text-[24px] whitespace-nowrap sm:text-2xl md:text-3xl lg:text-4xl w-full text-center  xl:text-left mt-6 sm:mt-0  font-normal  xl:w-[528px] xl:text-4xl  text-[#5A5C72] dark:text-[#CED3FF] tracking-wider xl:font-semibold'>Front-End Developer</h1>
               <p className='text-[#454545] dark:text-[#E8E8E9] mt-[30px] sm:mt-[45px] text-center  xl:text-left'>Hey i am  <span className='bg-linearGradient_text text-gradient whitespace-nowrap'> Naseeb Sidan </span> </p>

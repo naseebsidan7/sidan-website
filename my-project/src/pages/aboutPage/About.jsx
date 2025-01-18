@@ -3,13 +3,16 @@ import ExpertiseSection from '../../components/ExpertiseSection'
 import { arrowLineRightBlack, arrowLineRightWhite, patternProjectDetails, patternWhiteProjectDetails } from '../../assets'
 
 const About = () => {
+     (function(){
+       console.log('IIFE!');
+     })();
   return (
     <div className=' mt-[10rem] sm:mt-[12rem] px-6 sm:px-20 xl:px-0 flex flex-col gap-[1rem] sm:gap-[1rem]  items-center justify-center max-w-5xl mx-auto'>
         
-        <img  src={patternProjectDetails} className='absolute top-0 left-0  z-[-1] dark:hidden object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
-        <img  src={patternWhiteProjectDetails} className='absolute top-0 left-0  z-[-1] hidden dark:block object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
+        <img  src={patternProjectDetails} className='absolute top-0 left-0  z-[1] dark:hidden object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
+        <img  src={patternWhiteProjectDetails} className='absolute top-0 left-0  z-[1] hidden dark:block object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
      
-        <div  className='w-full h-full gap-16 sm:gap-20 flex flex-col'>
+        <div  className='w-full h-full gap-16 sm:gap-20 flex flex-col z-[3]'>
            
             <div className='flex justify-between sm_clear_mp mx-8 py-3 sm:p-0  font-forum border-b-2 border-[#b5b2b29a] max-w-5xl  '>
                  <h1 className='text-nowrap text-[23px] sm:text-[26px] dark:text-white tracking-[2px] '>About me</h1>

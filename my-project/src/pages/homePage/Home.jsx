@@ -3,6 +3,7 @@ import Grid from '../../components/Grid'
 import SelectedProject from '../../components/SelectedProject'
 import ExpertiseSection from '../../components/ExpertiseSection'
 import MyApproachSection from '../../components/MyApproachSection'
+import { patternBlack, patternWhite } from '../../assets'
 
 const Home = () => {
 
@@ -29,8 +30,10 @@ const Home = () => {
 
            
         </div> */}
+        <img  src={patternBlack} className='absolute top-0 left-0  z-[1]  dark:hidden object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
+        <img  src={patternWhite} className='absolute top-0 left-0  z-[1] hidden dark:block object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
      
-        <Grid  /> 
+        <Grid /> 
         <SelectedProject />
         <ExpertiseSection />
         <MyApproachSection />

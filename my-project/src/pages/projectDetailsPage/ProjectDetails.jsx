@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, useLocation, useParams  } from 'react-router-dom'
+import { Link, useParams  } from 'react-router-dom'
  
 import ProjectDetailsCard from '../../components/ProjectDetailsCard'
 import { TpRightArrwBlack, TpRightArrwWhite } from '../../assets'
@@ -10,11 +10,9 @@ import { addProjectDetailsFailure, addProjectDetailsStarted, addProjectDetailsSu
 
 
 const ProjectDetails = () => {
-    
-    const location = useLocation()
-     
+
     const { id } = useParams()
-    console.log(id,'<====id')
+   
     const { projectDetails, loading, error } = useSelector((state) => state.projects);
     const dispatch = useDispatch();
 
@@ -25,7 +23,7 @@ const ProjectDetails = () => {
         
         const fetchProjectDetails = async () => {
           try {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/project/getProject/${id}`);
+            const res = await fetch(`/api/project/getProject/${id}`);
             const data = await res.json();
             dispatch(addProjectDetailsSuccess(data));  // Store data in Redux
           } catch (error) {
@@ -38,14 +36,13 @@ const ProjectDetails = () => {
       }
     }, [dispatch, id, projectDetails]); // Depend on projectDetails to prevent redundant fetch
     
-
-    console.log(projectDetails,'prid')
+ 
   return (
     <div className='dark:text-white mt-[8rem] flex flex-col gap-[3rem] sm:gap-[4rem]  max-w-5xl mx-auto px-6 sm:px-10 md:px-20 xl:px-0'>
-          <img  src={patternProjectDetails} className='absolute top-0 left-0  z-[-1] dark:hidden object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
-          <img  src={patternWhiteProjectDetails} className='absolute top-0 left-0  z-[-1] hidden dark:block object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
+          <img  src={patternProjectDetails} className='absolute top-0 left-0  z-[1] dark:hidden object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
+          <img  src={patternWhiteProjectDetails} className='absolute top-0 left-0  z-[1] hidden dark:block object-cover w-full h-full sm:w-auto sm:h-auto ' alt="" />
      
-       <div className='flex flex-col md:flex-row items-center justify-between md:border-b border-[#474747]  gap-[1rem] md:gap-[10px] '>
+       <div className='flex flex-col md:flex-row items-center justify-between md:border-b border-[#474747]  gap-[1rem] md:gap-[10px]  z-[3]'>
          
           <h3 className="text-[24px] sm:text-[28px]  text-center  md:text-left  lg:text-[30px] border-b border-[#474747] md:border-none  xl:text-[45px]  mb-2 xl:mb-5 font-shippori  bg-grayDarkText   dark:bg-grayWhiteText text-gradient
               text-wrap leading-10 md:leading-relaxed tracking-[2%] line-clamp-2 max-w-4xl capitalize">

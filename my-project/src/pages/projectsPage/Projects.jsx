@@ -35,7 +35,7 @@ const Projects = () => {
    
          const fetchProjects = async () => {
             try {
-               const res = await fetch(`${import.meta.env.VITE_API_URL}/project/getProjects`);
+               const res = await fetch(`/api/project/getProjects`);
                const data = await res.json()
                data.forEach((project) => dispatch(addProjectSuccess(project)))
             } catch (error) {
@@ -61,18 +61,18 @@ const Projects = () => {
             <>
                <img 
                   src={patternProjectBlack} 
-                  className="absolute top-0 left-0 z-[-1] dark:hidden object-cover w-full h-full sm:w-auto sm:h-auto" 
+                  className="absolute top-0 left-0 z-[1] dark:hidden object-cover w-full h-full sm:w-auto sm:h-auto" 
                   alt="" 
                />
                <img 
                   src={patternWhiteProjectPage} 
-                  className="absolute top-0 left-0 z-[-1] hidden dark:block object-cover w-full h-full sm:w-auto sm:h-auto" 
+                  className="absolute top-0 left-0 z-[1] hidden dark:block object-cover w-full h-full sm:w-auto sm:h-auto" 
                   alt="" 
                />
             </>
             )}
 
-       <div className='font-forum scale-95 lg:scale-100 text-[17px] sm:text-[19px] w-full h-[162px] max-w-[850px] flex flex-wrap items-center justify-center gap-5 sm:p-0 px-2'>
+       <div className='font-forum scale-95 lg:scale-100 text-[17px] sm:text-[19px] w-full h-[162px] max-w-[850px] flex flex-wrap items-center justify-center z-[3] gap-5 sm:p-0 px-2'>
            {categories.map((category)=> (
             <div key={category.name} 
                  className={`project-category h-[58px] sm:h-[65px] border border-black dark:border-white  rounded-full  ${category.width} 
@@ -84,7 +84,7 @@ const Projects = () => {
            ))}
        </div>
 
-       <div className="grid grid-cols-1 mt-[7rem] sm:mt-[4rem]  xl:grid-cols-2 gap-10  " style={{ gridAutoFlow: 'row dense' }}>
+       <div className="grid grid-cols-1  mt-[7rem] sm:mt-[4rem]  xl:grid-cols-2 gap-10 z-[3]  " style={{ gridAutoFlow: 'row dense' }}>
           {loading && <p className='text-blue-400'>Loading projects...</p>}
           {projects.length > 0 && error && <p className='text-red-500'>Error: {error}</p>}
           {projects.length <= 0 && <p className='text-red-500'> No project found</p>}

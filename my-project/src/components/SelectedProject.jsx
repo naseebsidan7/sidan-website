@@ -21,7 +21,7 @@ const SelectedProject = () => {
        
              const fetchProjects = async () => {
                 try {
-                   const res = await fetch(`${import.meta.env.VITE_API_URL}/project/getProjects`)
+                   const res = await fetch(`/api/project/getProjects`)
                    const data = await res.json()
                    data.forEach((project) => dispatch(addProjectSuccess(project)))
                 } catch (error) {
@@ -36,10 +36,10 @@ const SelectedProject = () => {
        
 
      return (
-          <div className="dark:text-white mt-[10rem] sm:mt-[13rem] flex flex-col gap-[4rem] sm:gap-[5rem]  items-center justify-center max-w-5xl mx-auto">
+          <div className="dark:text-white mt-[10rem] sm:mt-[13rem] flex flex-col gap-[4rem] sm:gap-[5rem]  items-center justify-center max-w-5xl mx-auto ">
                <Header firstTitle='Selected' secondTitle='Projects' />
 
-               <div className="flex flex-col justify-center items-center xl:flex-row gap-10  ">
+               <div className="flex flex-col justify-center items-center xl:flex-row gap-10 z-[3] ">
                     {/* <ProjectCard /> */}
 
                    {projects.slice(0,2).map((item) => (

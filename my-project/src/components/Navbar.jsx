@@ -14,23 +14,23 @@ const Navbar = () => {
     
 
   return (
-        <nav className=' flex navbar_wrapper z-[3]  w-full py-[60px] px-10  xl:px-0   items-center justify-between scale-90 lg:scale-100  '>
+        <nav className=' flex navbar_wrapper z-[100] relative  w-full py-[60px] px-10  xl:px-0   items-center justify-between scale-90 lg:scale-100  '>
        
               <Link to='/' className=''>
                    <img src={theme.mode === 'light' ? sidanLogoWhite : sidanLogoDark  } className=' h-auto md:h-[65px]' alt="logo-sidan" />
               </Link>
 
-              <div className="navbar_container flex  absolute top-[98%] z-20 left-1/2 transform -translate-x-1/2 md:transform-none md:static bg-lightGray dark:bg-lgBackgroundDark dark:text-white w-[390px] h-[65px] rounded-full items-center">
+              <div className="navbar_container flex z-[100]  absolute top-[98%]  left-1/2 transform -translate-x-1/2 md:transform-none md:static bg-lightGray dark:bg-lgBackgroundDark dark:text-white w-[390px] h-[65px] rounded-full items-center">
                     <ul className='flex w-full items-center z-20 justify-around text-[15px]'>
-                          <li className={`navbar_actived_button ${currentPath === '' || currentPath === 'home' ? ' bg-white  dark:bg-themeBtnIconBg' : '' }`}>
-                             <Link to='/' className='' >Home</Link>
-                          </li>     
-                          <li className={`navbar_actived_button ${currentPath === 'projects' || currentPath === 'project' ? ' bg-white  dark:bg-themeBtnIconBg' : '' }`}>
-                             <Link to='/projects'>Projects</Link>
-                          </li>     
-                          <li className={`navbar_actived_button ${currentPath === 'contact' ? ' bg-white  dark:bg-themeBtnIconBg' : '' }`}>
-                             <Link to='/contact'>Contact</Link>
-                          </li>     
+                          <Link to='/' className={`navbar_actived_button ${currentPath === '' || currentPath === 'home' ? ' bg-white  dark:bg-themeBtnIconBg' : '' }`}>
+                              Home
+                          </Link>     
+                          <Link to='/projects' className={`navbar_actived_button ${currentPath === 'projects' || currentPath === 'project' ? ' bg-white  dark:bg-themeBtnIconBg' : '' }`}>
+                              Projects 
+                          </Link>     
+                          <Link to='/contact' className={`navbar_actived_button ${currentPath === 'contact' ? ' bg-white  dark:bg-themeBtnIconBg' : '' }`}>
+                             <>Contact</>
+                          </Link>     
                     </ul>
               </div>
 

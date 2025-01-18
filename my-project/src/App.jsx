@@ -33,7 +33,7 @@ function App() {
     <div className="app bg-backgroundLight dark:bg-backgroundDark relative ">
       <BrowserRouter >
           
-            <div className="max-w-5xl mx-auto ">
+            <div className="max-w-[1152px] mx-auto ">
             {!excludeNavbarFooter.includes(window.location.pathname) && <Navbar />}
 
                 <Routes>

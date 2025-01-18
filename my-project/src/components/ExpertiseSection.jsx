@@ -6,7 +6,7 @@ import Header from "./Header"
  
 const ExpertiseSection = () => {
   return (
-    <div  className="dark:text-white mt-[8rem] sm:mt-[12rem] flex flex-col gap-[4rem] sm:gap-[5rem]  items-center justify-center">
+    <div  className="dark:text-white mt-[8rem] sm:mt-[12rem] flex flex-col gap-[4rem] sm:gap-[5rem]  items-center justify-center z-[3]">
                 <Header firstTitle='My' secondTitle='Expertise' />
                 
                 <div  className=" max-w-5xl w-full mx-auto grid grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-4 lg:grid-rows-4  

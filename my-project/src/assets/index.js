@@ -86,6 +86,10 @@ import patternWhiteProjectPage from './assets/patterns/patternWhiteProjectPage.s
 import patternWhiteProjectDetails from './assets/patterns/patternWhiteProjectDetails.svg'
 import patternProjectDetails from './assets/patterns/patternProjectDetails.svg'
 
+import patternContact from './assets/patterns/patternContacts.svg'
+import patternContactWhite from './assets/patterns/patternWhiteContacts.svg'
+
+ 
  
 /* CONTACTS */
  
@@ -168,7 +172,8 @@ export {
     patternWhiteProjectPage,
     patternWhiteProjectDetails,
     patternProjectDetails,
-     
+    patternContact,
+    patternContactWhite,
 
 
     gmailCX,

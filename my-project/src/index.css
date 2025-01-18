@@ -4,16 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  box-sizing: border-box;
+}
 
 html, 
 body,
 #root, 
-.app {
-  height: 100vh;
-  width: 100vw;
+.app {  
   margin: 0;
   padding: 0;
 }
+
 
  body { 
   background-color: #f6F6F6; /* light mode */
@@ -27,11 +29,8 @@ body,
   }
 }
 
- 
 
-.backgroundImage-Grid {
-   background: url('/images/assets/pattern-white.svg');
-}
+ 
 
 .dark body { 
   background-color: rgba(18, 17, 17, 94); /* Dark mode */
@@ -111,6 +110,9 @@ body,
 /* GRID */
 
 .grid_container{
+  display: -webkit-grid; /* Chrome */
+ 
+
   display: grid;
   color: white;
   position: relative;
@@ -481,9 +483,7 @@ body,
      width: 459px ;
      height: 619px;
    }
-   .projectDetails-card{
-  
-  }
+ 
    .grid_4{
     padding: 50px 10px;
      gap: 20px;
@@ -496,9 +496,7 @@ body,
     width: 100%;
     height: 609px;
   }
-  .projectDetails-card{
  
-  }
 }
 
 
@@ -509,9 +507,7 @@ body,
     width: 100%;
     height: 619px;
   }
-  .projectDetails-card{
-   
-  }
+ 
 }
 
 
@@ -554,6 +550,7 @@ body,
  
 @media (max-width: 537px) {
   .grid_container {
+    display: -webkit-grid; /* Chrome */
     display: grid;
     grid-template-columns: 1fr; /* Single column layout */
     grid-template-rows: auto;  /* Automatically adjust row heights */

@@ -14,7 +14,7 @@ const ProjectCard = ({item, projectDetails}) => {
     const handleMouseLeave = () => setIsHovered(false);
     
   return (
-          <Link key={item.title} onClick={() => window.scrollTo(0, 0)}  to={projectDetails? `/project/${item.index}` :`/projects`} className="project-card  group  sm:w-[459px] sm:h-[634px]  md:w-[556px] md:h-[654px]      relative rounded-[35px] bg-white dark:bg-[#202028] shadow-even-md ">
+          <Link key={item.title} onClick={() => window.scrollTo(0, 0)}  to={projectDetails? `/project/${item.index}` :`/projects`} className="project-card  group z-[3] sm:w-[459px] sm:h-[634px]  md:w-[556px] md:h-[654px]      relative rounded-[35px] bg-white dark:bg-[#202028] shadow-even-md ">
           <div className="h-[279px] w-full">
               <img src={item.imageUrls[0]} className=" object-cover rounded-tr-[35px] h-full w-full  rounded-tl-[35px] " alt="restuarant" />
           </div>

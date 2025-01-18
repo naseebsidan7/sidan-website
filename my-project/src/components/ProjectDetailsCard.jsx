@@ -32,7 +32,7 @@ const ProjectDetailsCard = ({ item }) => {
     };
 
   return (
-    <div className="projectDetails-card    md:w-full md:h-auto   pb-24    relative rounded-[35px] bg-white dark:bg-[#202028] shadow-even-md  mt-2 ">
+    <div className="projectDetails-card    md:w-full md:h-auto   pb-24   z-[3]  relative rounded-[35px] bg-white dark:bg-[#202028] shadow-even-md  mt-2 ">
         
         <div className="lg:h-[538px] w-full relative overflow-hidden">
             {item?.imageUrls?.length > 0 ? ( // Ensure item and item.imageUrls are defined
